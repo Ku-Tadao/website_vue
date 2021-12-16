@@ -11,14 +11,26 @@ const routes = [
     component: Home
   },
   {
-    path: '/nieuws',
+    path: '/news',
     name: 'Nieuws',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Nieuws.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/News.vue')
   },
   {
     path: '/about',
-    name: 'About',
+    name: 'Over ons',
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  }
+,
+  {
+    path: '/images',
+    name: 'Afbeeldingen',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Images.vue')
+  }
+,
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Contact.vue')
   }
 ]
 
