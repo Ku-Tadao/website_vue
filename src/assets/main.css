@@ -1,0 +1,9 @@
+.about, .contact, .home, .images, .news{
+    padding-top: 10px
+}
+
+a{
+    text-decoration: none !important;
+    color: #42b983 !important;
+    padding: 5px;
+}
