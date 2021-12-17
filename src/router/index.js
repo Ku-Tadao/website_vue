@@ -1,10 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import News from '../views/News.vue'
+import About from '../views/About.vue'
+import Images from '../views/Images.vue'
+import Contact from '../views/Contact.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
+const routes =
+    [
   {
     path: '/',
     name: 'Home',
@@ -13,28 +18,29 @@ const routes = [
   {
     path: '/news',
     name: 'Nieuws',
-    component: () => import(/* webpackChunkName: "about" */ '../views/News.vue')
+    component: News
   },
   {
     path: '/about',
     name: 'Over ons',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: About
   }
 ,
   {
     path: '/images',
     name: 'Afbeeldingen',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Images.vue')
+    component: Images
   }
 ,
   {
     path: '/contact',
     name: 'Contact',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Contact.vue')
+    component: Contact
   }
 ]
 
 const router = new VueRouter({
+  mode: 'history',
   routes
 })
 
