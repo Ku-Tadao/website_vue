@@ -1,35 +1,19 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/news">Nieuws</router-link> |
-      <router-link to="/images">Afbeeldingen</router-link> |
-      <router-link to="/about">Over ons</router-link> |
+  <div>
+    <b-navbar class="header" type="dark" variant="secondary" fixed="top">
+      <router-link style="text-decoration: none; color: #42b983; padding: 10px;" to="/">
+        <img src="./assets/BLogo.png" height="30" width="30" alt="Kitten">
+      </router-link>
+      <router-link to="/">Home</router-link>
+      <router-link to="/news">Nieuws</router-link>
+      <router-link to="/images">Afbeeldingen</router-link>
+      <router-link to="/about">Overs ons</router-link>
       <router-link to="/contact">Contact</router-link>
+    </b-navbar>
+
+    <div class="mt-5">
+      <router-view></router-view>
     </div>
-    <router-view/>
   </div>
+
 </template>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
